@@ -19,12 +19,10 @@ while True:
     # 动态加载-->全部加载
     # 执行脚本,进度条拉到底部
     driver.execute_script(
-        'window.scrollTo(0,\
-         document.body.scrollHeight)')
+        'window.scrollTo(0,document.body.scrollHeight)')
     time.sleep(2)
     # 正常解析爬取
-    r_list = driver.find_elements_by_xpath \
-        ('//div[@id="J_goodsList"]//li')
+    r_list = driver.find_elements_by_xpath ('//div[@id="J_goodsList"]//li')
 
     # r为每一个商品的节点对象
     for r in r_list:
