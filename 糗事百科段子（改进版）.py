@@ -18,7 +18,6 @@ class Qiushi:
         parseHtml = etree.HTML(html)
         p_list = parseHtml.xpath('//div[@id="content-left"]/div/@id')
         p_list = set(p_list)
-        i = 0
         for p in p_list:
             p = p.split('_')[2]
             url = self.duanziurl + p
